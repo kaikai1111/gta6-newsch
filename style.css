@@ -1,0 +1,156 @@
+/* ===== GTA6ニュース速報まとめ — 軽量テンプレ ===== */
+:root{
+  --pink:#e0177a;      /* バナーのマゼンタ */
+  --orange:#f7841f;    /* 夕焼けオレンジ */
+  --sun:#ffd23f;       /* 太陽イエロー */
+  --night:#1b1026;     /* 夜のバイスシティ */
+  --ink:#222;
+  --sub:#777;
+  --line:#ecdfe6;
+  --bg:#f7f1f4;
+  --card:#fff;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{font:15px/1.7 -apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif;color:var(--ink);background:var(--bg)}
+a{color:inherit;text-decoration:none}
+a:hover{color:var(--pink)}
+img{display:block;max-width:100%;height:auto}
+ul{list-style:none}
+.wrap{max-width:1100px;margin:0 auto;padding:0 16px}
+
+/* ---------- Header ---------- */
+.topbar{background:var(--night);color:#fff;font-size:12px;text-align:center;padding:4px 16px}
+.hero{position:relative;overflow:hidden;text-align:center;color:#fff;padding:34px 16px 30px;
+  background:linear-gradient(180deg,#8b1a8f 0%,var(--pink) 45%,var(--orange) 100%)}
+.hero::before{content:"";position:absolute;left:50%;bottom:-120px;width:300px;height:300px;margin-left:-150px;
+  border-radius:50%;background:var(--sun);opacity:.85}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:60px;
+  background:repeating-linear-gradient(180deg,transparent 0 8px,rgba(139,26,143,.55) 8px 12px)}
+.logo{position:relative;z-index:1;display:inline-block;font-size:clamp(28px,6vw,46px);font-weight:900;letter-spacing:.04em;
+  text-shadow:3px 3px 0 var(--night)}
+.logo:hover{color:#fff}
+.logo small{display:block;font-size:13px;font-weight:700;letter-spacing:.1em;text-shadow:none;
+  background:var(--night);margin-top:6px;padding:2px 10px}
+.gnav{background:var(--night);border-bottom:3px solid var(--pink);position:sticky;top:0;z-index:10}
+.gnav ul{display:flex;justify-content:center;overflow-x:auto;white-space:nowrap;scrollbar-width:none}
+.gnav a{display:block;color:#fff;font-size:14px;font-weight:700;padding:11px 16px}
+.gnav a:hover,.gnav a[aria-current]{background:var(--pink);color:#fff}
+
+/* ---------- Layout ---------- */
+.layout{display:grid;grid-template-columns:1fr 300px;gap:24px;margin:20px auto 40px}
+.ttl{background:var(--pink);color:#fff;font-size:17px;font-weight:700;padding:8px 14px;border-left:6px solid var(--sun)}
+.box{background:var(--card);margin-bottom:24px}
+
+/* ---------- 記事リスト ---------- */
+.post{display:grid;grid-template-columns:200px 1fr;gap:14px;padding:14px;border-bottom:1px solid var(--line)}
+.post:hover .post-t{color:var(--pink)}
+.thumb{position:relative;aspect-ratio:16/10;overflow:hidden;background:var(--night)}
+.thumb img{width:100%;height:100%;object-fit:cover}
+.thumb .play{position:absolute;right:6px;bottom:6px;background:rgba(0,0,0,.7);color:#fff;font-size:11px;padding:1px 6px}
+.cat{display:inline-block;background:var(--orange);color:#fff;font-size:11px;font-weight:700;padding:1px 8px;margin-bottom:4px}
+.cat.c-news{background:var(--pink)}
+.cat.c-spec{background:#7b2fbf}
+.cat.c-trivia{background:#1aa38c}
+.post-t{font-size:16px;font-weight:700;line-height:1.5}
+.post-ex{font-size:13px;color:var(--sub);margin-top:4px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.date{font-size:12px;color:var(--sub);margin-top:6px}
+
+.pager{display:flex;justify-content:center;gap:4px;padding:18px 0}
+.pager a,.pager span{min-width:36px;text-align:center;padding:6px 10px;background:var(--card);border:1px solid var(--line);font-size:14px}
+.pager .now{background:var(--pink);border-color:var(--pink);color:#fff}
+
+/* ---------- 広告枠（後で差し替え） ---------- */
+.ad{background:var(--card);text-align:center;padding:10px;margin-bottom:24px}
+.ad-label{font-size:11px;color:var(--sub);display:block;margin-bottom:6px}
+.ad-slot{display:flex;align-items:center;justify-content:center;margin:0 auto;background:repeating-linear-gradient(45deg,#f3e9ee 0 10px,#fbf6f8 10px 20px);
+  color:#b98aa1;font-size:12px;border:1px dashed #e2c6d4}
+.ad-728{max-width:728px;height:90px}
+.ad-300{width:300px;max-width:100%;height:250px}
+.ad-in{height:120px}
+.layout-ad{margin-top:20px}
+
+/* ---------- Sidebar ---------- */
+.side .box{padding-bottom:6px}
+.prof{padding:14px;display:flex;gap:12px;align-items:center;font-size:13px}
+.prof-ico{flex:0 0 64px;height:64px;background:var(--night);color:var(--sun);font-weight:900;font-size:14px;line-height:1.1;
+  display:flex;align-items:center;justify-content:center;text-align:center;border:3px solid var(--pink)}
+.prof b{display:block;font-size:14px}
+.btn{display:block;margin:0 14px 10px;background:#e00;color:#fff;text-align:center;font-weight:700;font-size:14px;padding:8px}
+.btn:hover{color:#fff;opacity:.85}
+.search{display:flex;padding:12px}
+.search input{flex:1;min-width:0;border:1px solid var(--line);padding:8px;font-size:14px;border-radius:0}
+.search button{border:0;background:var(--night);color:#fff;padding:0 14px;font-size:14px;cursor:pointer;border-radius:0}
+.rank li{display:flex;gap:10px;padding:10px 12px;border-bottom:1px solid var(--line);counter-increment:r;align-items:flex-start}
+.rank{counter-reset:r}
+.rank .rt{position:relative;flex:0 0 90px;aspect-ratio:16/10;overflow:hidden;background:var(--night)}
+.rank .rt img{width:100%;height:100%;object-fit:cover}
+.rank .rt::before{content:counter(r);position:absolute;left:0;top:0;z-index:1;background:var(--pink);color:#fff;font-size:12px;font-weight:700;width:22px;text-align:center}
+.rank li:nth-child(1) .rt::before{background:#d4a017}
+.rank li:nth-child(2) .rt::before{background:#9aa0a6}
+.rank li:nth-child(3) .rt::before{background:#b8733a}
+.rank a{font-size:13px;font-weight:700;line-height:1.5}
+.rank .v{font-size:11px;color:var(--sub);font-weight:400;display:block}
+.cats a{display:flex;justify-content:space-between;padding:9px 14px;border-bottom:1px solid var(--line);font-size:14px}
+.cats a::before{content:"▶";color:var(--pink);font-size:10px;margin-right:8px;align-self:center}
+.cats a span:first-child{flex:1}
+.cats .n{color:var(--sub);font-size:12px}
+
+/* ---------- 記事ページ ---------- */
+.crumb{font-size:12px;color:var(--sub);padding:10px 0 0}
+.crumb a{color:var(--sub)}
+.article{background:var(--card);padding:20px}
+.article h1{font-size:22px;line-height:1.5;margin:6px 0 4px}
+.article h2{font-size:18px;background:var(--night);color:#fff;padding:8px 12px;border-left:6px solid var(--pink);margin:28px 0 14px}
+.article h3{font-size:16px;border-bottom:2px solid var(--pink);padding-bottom:4px;margin:22px 0 10px}
+.article p{margin:0 0 1.2em}
+.article .meta{font-size:12px;color:var(--sub);margin-bottom:16px}
+.yt{position:relative;width:min(100%,340px);aspect-ratio:9/16;margin:0 auto 20px;background:#000;cursor:pointer;overflow:hidden}
+.yt img{width:100%;height:100%;object-fit:cover;opacity:.85}
+.yt::after{content:"";position:absolute;z-index:1;left:50%;top:50%;width:68px;height:48px;margin:-24px 0 0 -34px;background:#e00;
+  clip-path:polygon(0 0,100% 0,100% 100%,0 100%);}
+.yt::before{content:"";position:absolute;z-index:2;left:50%;top:50%;margin:-11px 0 0 -7px;border:11px solid transparent;border-left:18px solid #fff;border-right:0}
+.yt iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.yt.on::before,.yt.on::after{display:none}
+.point{border:2px solid var(--pink);background:#fff7fb;padding:12px 16px;margin:0 0 20px}
+.point b{color:var(--pink)}
+.point li{padding-left:1.2em;text-indent:-1.2em}
+.point li::before{content:"✔ ";color:var(--pink)}
+.share{display:flex;gap:6px;margin-top:24px}
+.share a{flex:1;text-align:center;color:#fff;font-size:13px;font-weight:700;padding:8px}
+.share .x{background:#000}.share .line{background:#06c755}.share .yt-ch{background:#e00}
+.related{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding:14px}
+.related a{font-size:13px;font-weight:700;line-height:1.5}
+.related .thumb{margin-bottom:6px}
+
+/* ---------- Footer ---------- */
+.footer{background:var(--night);color:#ccc;font-size:12px;text-align:center;padding:24px 16px;border-top:4px solid var(--pink)}
+.footer ul{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 18px;margin-bottom:12px}
+.footer a{color:#fff}
+.totop{position:fixed;right:12px;bottom:12px;width:40px;height:40px;background:var(--pink);color:#fff;display:flex;align-items:center;justify-content:center;font-size:18px}
+.totop:hover{color:#fff}
+
+/* ---------- SP ---------- */
+@media (max-width:860px){
+  .layout{grid-template-columns:1fr}
+  .gnav ul{justify-content:flex-start}
+}
+@media (max-width:560px){
+  .post{grid-template-columns:120px 1fr;gap:10px;padding:10px}
+  .post-t{font-size:14px}
+  .post-ex{display:none}
+  .article{padding:16px}
+  .article h1{font-size:19px}
+  .related{grid-template-columns:repeat(2,1fr)}
+  .ad-728{height:100px}
+}
+
+/* ---------- 固定ページ ---------- */
+.info{width:100%;border-collapse:collapse;font-size:14px;margin-bottom:8px}
+.info th,.info td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
+.info th{width:30%;background:#fbf2f6;white-space:nowrap}
+.article a{color:var(--pink);text-decoration:underline}
+.list{margin:0 0 1.2em 1.4em;list-style:disc}
+.form-slot{border:2px dashed #e2c6d4;background:#fbf6f8;color:#b98aa1;text-align:center;padding:60px 16px;margin:20px 0;font-size:14px}
+.gform{display:block;width:100%;height:1150px;border:0;margin:20px 0 8px;background:#fff}
+@media (max-width:560px){.gform{height:1300px}}
