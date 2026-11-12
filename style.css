@@ -154,3 +154,11 @@ ul{list-style:none}
 .form-slot{border:2px dashed #e2c6d4;background:#fbf6f8;color:#b98aa1;text-align:center;padding:60px 16px;margin:20px 0;font-size:14px}
 .gform{display:block;width:100%;height:1150px;border:0;margin:20px 0 8px;background:#fff}
 @media (max-width:560px){.gform{height:1300px}}
+
+/* ---------- 記事本文の追加パーツ ---------- */
+a.cat{text-decoration:none}
+.article a.cat,.article .share a{color:#fff;text-decoration:none}
+.article .share a:hover{opacity:.85}
+.note{font-size:13px;color:#555;background:#faf6f8;border-left:4px solid var(--orange);padding:8px 12px;margin:0 0 1.2em}
+.note a{color:var(--pink)}
+.article strong{background:linear-gradient(transparent 62%,#ffe58a 62%)}
