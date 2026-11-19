@@ -13,7 +13,7 @@ NAME = "GTA6ニュース速報まとめ"
 CH = "https://www.youtube.com/@%E3%81%82%E3%81%A4%E3%81%BE%E3%82%8C%E3%82%B2%E3%83%BC%E3%83%A0%E5%A4%A9%E5%9B%BD"
 ADS = False  # AdSense に合格したら True にして、下の ad() に広告コードを入れる
 # 忍者AdMax 自動広告（全ページの <head> に入る）。外すときは "" にする
-NINJA_AUTO = '<script async src="https://adm.shinobi.jp/st/auto.js" data-admax-id="e9285b71b89d3a591bff6879594fa157"></script>'
+NINJA_AUTO = ''  # 忍者AdMax 全自動タグ（アダルト広告対策で一時停止 2026-11-19）: <script async src="https://adm.shinobi.jp/st/auto.js" data-admax-id="e9285b71b89d3a591bff6879594fa157"></script>
 
 CATS = [("news", "最新情報"), ("release", "発売日・価格"), ("spec", "対応機種"),
         ("trivia", "雑学"), ("origin", "元ネタ解説")]
