@@ -133,7 +133,7 @@ def head(title, desc, path, cur=None, og_image=None, og_type="website"):
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="stylesheet" href="style.css">
 {NINJA_AUTO}
-<!-- AdSense: 審査・配信時はここに AdSense のコードを入れる -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9161131810938784" crossorigin="anonymous"></script>
 </head>
 <body id="top">
 <div class="topbar">GTA6の最新情報を毎日ショートでお届け！</div>
